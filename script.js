@@ -24,4 +24,22 @@ console.log(removeDups(numbers));
 let removeDupNums = numbersArray.filter((ele,ind) => {
     return numbersArray.indexOf(ele) == ind;
 })
-console.log(removeDupNums)
+console.log(removeDupNums);
+
+// Write a function that returns the reverse of a string
+
+// using array methods and using loops:
+let myWord = "Never Give Up !";
+console.log(myWord);
+function reverseString(str) {
+    let result = "";
+    // let result = str.split(" ").reverse().join(" ");
+    for (let i = str.length - 1; i >= 0; i--){
+        result += str[i];
+    }
+    return result;
+}
+console.log(reverseString(myWord));
+
+ 
+
