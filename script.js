@@ -41,5 +41,44 @@ function reverseString(str) {
 }
 console.log(reverseString(myWord));
 
- 
+// Write a function that returns the longest word in the sentence
+let mySent = "Write a functions that returns the longest word in the sentence";
+
+function longestWirdFn(str) {
+    let strToArray = str.split(" ");
+    console.log(strToArray)
+    let longWord = strToArray[0];
+    for (let word of strToArray) {
+        if (longWord.length <= word.length) {
+            longWord = word;
+        }
+    }
+    return longWord;
+}
+
+console.log(longestWirdFn(mySent));
+
+// Write a function that checks whether given string is palindrome or not
+// using array methods :
+let palStr = "Racecar";
+console.log(palStr.toLowerCase())
+function checkPalindrome(str) {
+    let reverseStr = str.toLowerCase().split("").reverse().join("");
+    return str.toLowerCase() == reverseStr;
+}
+console.log(checkPalindrome(palStr));
+
+// using loops :
+let myPalindrome = "Madama";
+function checkPalOrNot(str) {
+    let palWord = str.toLowerCase();
+    console.log(palWord);
+    for (let i = 0, j = palWord.length - 1; i < j; i++, j--){
+        if (palWord[i]!==palWord[j]) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(checkPalOrNot(myPalindrome))
 
